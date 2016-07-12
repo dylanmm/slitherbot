@@ -1,0 +1,28 @@
+{
+   "author": "http://slitherplus.io",
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "img/btn/icon128.png",
+      "default_popup": "popup.html",
+      "default_title": "Slitherbot"
+   },
+   "content_scripts": [ {
+      "js": [ "inject.js" ],
+      "matches": [ "*://slither.io/", "*://slither.io/?*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "The Worlds Best Slither.io Mod Zoom and Extension! Hundreds of custom skins! Skin Creator!",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   "manifest_version": 2,
+   "name": "Slitherbot",
+   "permissions": [ "webRequest", "*://slither.io/", "*://slither.io/?*", "tabs", "storage" ],
+   "short_name": "Sb",
+   "version": "6.0",
+   "web_accessible_resources": ["jquery-1.12.3.min.js", "script.js" ]
+}
