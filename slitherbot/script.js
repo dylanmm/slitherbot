@@ -14,3 +14,14 @@ if (/firefox/i.test(navigator.userAgent)) {
 } else {
    document.body.onmousewheel = zoom;
 }
+
+// KEY PRESSES
+document.addEventListener("keydown", keydownhandl, false);
+
+function keydownhandl(e) {
+   if (e.keyCode==70) {// f key
+   // Reset Zoom
+      if (!window.gsc) { return; }
+      window.gsc = 0.9; // Default zoom level
+   }
+}
